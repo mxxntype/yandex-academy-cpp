@@ -8,7 +8,7 @@ int main(void) {
     std::string word;
     std::cin >> word;
 
-    std::cout << soundex_code(word);
+    std::cout << soundex_code(word) << std::endl;
 
     return 0;
 }
@@ -44,7 +44,7 @@ std::string soundex_code(const std::string &initial_str) {
     }
 
     while (soundex_code.length() < 4) soundex_code.push_back('0');
-    soundex_code = soundex_code.substr(0, 4);
+    while (soundex_code.length() > 4) soundex_code.pop_back();
 
     return soundex_code;
 }
