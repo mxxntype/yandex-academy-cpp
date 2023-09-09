@@ -44,7 +44,7 @@ std::string soundex_code(const std::string &initial_str) {
     }
 
     while (soundex_code.length() < 4) soundex_code.push_back('0');
-    soundex_code.erase(4);
+    soundex_code = soundex_code.substr(0, 4);
 
     return soundex_code;
 }
