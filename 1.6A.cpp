@@ -25,10 +25,10 @@ bool check_password(const std::string &password) {
 
     size_t different_types = 0;
     if (correct) {
-        different_types += (size_t)has_lowercase(password);
-        different_types += (size_t)has_uppercase(password);
-        different_types += (size_t)has_digits(password);
-        different_types += (size_t)has_symbol(password);
+        different_types += has_lowercase(password);
+        different_types += has_uppercase(password);
+        different_types += has_digits(password);
+        different_types += has_symbol(password);
     }
 
     return (correct && different_types >= 3);
